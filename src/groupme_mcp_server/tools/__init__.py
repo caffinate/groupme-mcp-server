@@ -55,5 +55,4 @@ def register_all(mcp: FastMCP) -> None:
     )
     for fn in read_tools:
         mcp.tool(fn, annotations=common.READ_ONLY_ANNOTATIONS)
-    mcp.tool(send_message, annotations=common.SEND_MESSAGE_ANNOTATIONS)
-    mcp.tool(react_to_message, annotations=common.REACTION_ANNOTATIONS)
+        # READ-ONLY FORK: send_message and react_to_message are intentionally not registered, so no client can post or react as the token's account.
